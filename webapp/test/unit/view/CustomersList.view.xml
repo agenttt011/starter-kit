@@ -1,0 +1,38 @@
+<mvc:View controllerName="stk.starterkit.controller.CustomersList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <Shell id ="shell1">
+       <App id="app1">
+       <Page id="page1" title= "{i18n>title}">
+       <SearchField  id = "search1" search="handleLiveChange"/>
+        <customHeader>
+            <Toolbar id="toolbar">
+                <Title id="title" text="{i18n>title}"/>
+                    <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+                <Button id = "button1" text="{i18n>addCustomer}" press="createCustomer" class="sapUiMediumMarginBegin" />
+                    <Button id="button2" text="{i18n>performance}" press="onPerformance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom">
+                            </Button>
+            </Toolbar>
+        </customHeader>
+        <Table id = "customers1" items="{/Customers}">
+        <columns>
+            <Column id="column11">
+                <Label id= "label111" text="{i18n>companyName}" />
+            </Column>
+            <Column id="column22"> 
+                <Label id="label222" text="{i18n>country}" />
+            </Column>
+       </columns>
+       <items>
+            <ColumnListItem id = "columnlistitem11" type= "Navigation" press = "onCustomerPress">
+                <Text id="companyName1" text="{CompanyName}" />
+                <Text id="country1" text="{Country}" />
+            </ColumnListItem>
+       </items>
+
+        </Table>
+        </Page>
+       </App>
+    </Shell>
+</mvc:View>

@@ -1,0 +1,77 @@
+<mvc:View 
+    xmlns="sap.m"
+    controllerName="stk.starterkit.controller.CreateCustomer"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+		<VBox id="vbox1" class="sapUiSmallMargin"  alignItems="Stretch" >
+		<f:Form id="FormChange354"
+			editable="true" >
+			<f:title>
+				<core:Title id="title111" text="{i18n>createCustomer}" />
+			</f:title>
+
+            
+           
+			<f:layout>
+				<f:ResponsiveGridLayout id = "layout"
+					labelSpanXL="3"
+					labelSpanL="3"
+					labelSpanM="3"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer id = "container">
+					<f:formElements  >
+						<f:FormElement id = "formelement" label="{i18n>customerID}" >
+							<f:fields>
+								<Input width="50%" id="CustomerID" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement id = "formElement1" label="{i18n>customerName}">
+							<f:fields>
+								<Input width="50%" id="CustomerName"  />
+								
+							</f:fields>
+                            
+						</f:FormElement>
+                        <f:FormElement id = "formElement" label="" >
+							<f:fields>
+								
+
+    <Button id = "button11" type="Accept"
+			text="{i18n>create}"
+			press="onPress"
+            width="30%"
+           
+            class="sapUiLargeMarginBeginEnd sapUiSmallMarginTop"
+			ariaDescribedBy="acceptButtonDescription genericButtonDescription">
+				
+	</Button>
+							
+							</f:fields>
+                            
+						</f:FormElement>
+                      
+              
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+         
+		</f:Form>
+    
+	</VBox>
+
+  
+         	
+</mvc:View>

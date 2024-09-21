@@ -1,0 +1,37 @@
+<mvc:View controllerName="stk.starterkit.controller.Master"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <Shell id ="shell">
+       <App id="app2">
+       <Page id="page" title= "{i18n>title}">
+         <Carousel id="carousel" height="50%" loop="true">
+            <pages>                
+                <Image id="image" width = "50%" height="50%" src="https://www.drupal.org/files/Capgemini_Logo_2COL_RGB.png"></Image>
+                <Image id="image2" width = "50%" height="50%" src="https://cdn.prod.website-files.com/63a02e61e7ffb565c30bcfc7/65ea99845e53084280471b71_most%20beautiful%20landscapes%20in%20the%20world.webp"></Image>                          
+            </pages>
+            <customLayout>
+                <CarouselLayout id= "carolaout" visiblePagesCount="2"/>
+            </customLayout>
+        </Carousel>
+        <Table id = "customers" items="{/Customers}">
+        <columns>
+            <Column id="column1">
+                <Label id= "label1" text="{i18n>companyName}" />
+            </Column>
+            <Column id="column2"> 
+                <Label id="label2" text="{i18n>country}" />
+            </Column>
+       </columns>
+       <items>
+            <ColumnListItem id = "columnlistitem1">
+                <Text id="companyName" text="{CompanyName}" />
+                <Text id="country" text="{Country}" />
+            </ColumnListItem>
+       </items>
+
+        </Table>
+        </Page>
+       </App>
+    </Shell>
+</mvc:View>

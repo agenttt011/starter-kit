@@ -1,0 +1,33 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.CustomerDetails" displayBlock="true">
+    <Page xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="CustomerDetails"
+          showNavButton="true" navButtonPress="handleNavButtonPress" title="{CompanyName}">
+      	<customHeader>
+	<Toolbar id = "toolbar1">
+		<Title id="title1" text="{CompanyName}"/>
+            <ToolbarSpacer id = "toolbarspacer1"/>
+		<Button id = "button1111" text="{i18n>contactInfo}" press="onPress" />
+	</Toolbar>
+      </customHeader>
+        <Table id="_IDGenTable1"  class="center" items= "{Orders}"  >
+          <columns >
+          <Column id="_IDGenColumn1"  >
+                <Label id="_IDGenLabel1" text="{i18n>OrderID}"/>
+          </Column>
+          <Column id="_IDGenColumn2" >
+                <Label id="_IDGenLabel2" text="{i18n>OrderDate}"/>
+          </Column>
+           <Column id="_IDGenColumn3" >
+                <Label id="_IDGenLabel3" text="{i18n>Employee}"/>
+          </Column>
+          </columns>
+          <items>
+          <ColumnListItem id="_IDGenColumnListItem1">
+                  <Text id="_IDGenText1" text="{OrderID}"/>        
+                  <Text id="_IDGenText2" text="{path: 'OrderDate', type:'sap.ui.model.type.DateTime', formatOptions:{style:'medium'}}"/>   
+                  <Text id="_IDGenText3"  text="{parts:[{path: 'Employee/FirstName'},{path:'Employee/LastName'}], formatter: '.formatter.formatName'}"/>        
+          </ColumnListItem>
+          
+          </items>
+        </Table>
+    </Page>
+</mvc:View>

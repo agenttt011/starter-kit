@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m"  xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" controllerName="stk.starterkit.controller.CustomerDetails" > 
+    <Dialog id="contactDialog"  title="{i18n>ContactInformation}">
+    		<VBox id = "vbox">
+			<f:SimpleForm id="simpleform">
+    		<f:content>
+    				<Label id = "label11" text="{i18n>Name}"/>
+    				<Text id = "label22" text="{ContactName}"/>
+    				<Label id = "label3" text="{i18n>ContactTitle}"/>
+    				<Text id = "label4" text="{ContactTitle}"/>
+    				<Label id = "label5" text="{i18n>Address}"/>
+    				<Text id = "label6" text="{Address}"/>
+    				<Label id = "label7" text="{i18n>Phone}"/>
+    				<Text id = "label8" text="{Phone}"/>
+    		</f:content>
+            </f:SimpleForm>
+		</VBox>
+    	<beginButton>
+        <Button id = "button23" type="Reject" press="onCloseDialog" text="{i18n>Close}">
+     
+        </Button>
+    	</beginButton>
+    </Dialog>
+</core:FragmentDefinition>
